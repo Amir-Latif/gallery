@@ -1,19 +1,13 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/get-album-names', [GalleryController::class, "get_album_names"]);
+Route::post('/create-album', [GalleryController::class, "create_album"]);
+Route::post('/upload-file', [GalleryController::class, "upload_file"]);
+Route::delete('/retract-file', [GalleryController::class, "retract_file"]);
+Route::post('/submit-files', [GalleryController::class, "submit_files"]);
+Route::post('/edit-album', [GalleryController::class, "edit_album"]);
+Route::post('/delete-album', [GalleryController::class, "delete_album"]);
+Route::post('/delete-album-options', [GalleryController::class, "delete_album_options"]);
