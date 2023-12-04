@@ -21,7 +21,7 @@
 
     'resources/scripts/jquery.js',
     'resources/scripts/filepond.js',
-    'resources/styles/filepond-plugin-image-preview.js',
+    'resources/scripts/filepond-plugin-image-preview.js',
     'resources/scripts/filepond-jquery.js',
     'resources/scripts/filepond.js',
     'resources/scripts/global.js',
